@@ -1,0 +1,31 @@
+base-font-size = 22px
+
+def-bg-color     = hsla(0, 0%, 96%, 1)
+def-color        = hsla(216, 2%, 59%, 1)
+def-bold-color   = hsla(270, 7%, 65%, 1)
+def-em-color     = hsla(220, 2%, 35%, 1)
+def-cursor-color = hsla(220, 100%, 70%, 1)
+def-link-color   = hsla(360, 100%, 70%, 1)
+def-font-size    = 15px
+
+.SkrifPad.theme-default
+	font-family: "Ubuntu Mono", "Monospace"
+	background-color def-bg-color
+	color def-color
+	font-size rem(def-font-size)
+
+  .cm-header
+		color def-bold-color
+		font-size rem(22px)
+		font-weight 700
+
+	.cm-list, .cm-bold, .cm-em
+		color def-em-color
+   
+   .cm-link
+   	text-decoration underline
+   	color def-link-color
+
+	.CodeMirror-cursor
+		border-left-color def-cursor-color
+		border-size 2px
