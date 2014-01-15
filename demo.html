@@ -2,16 +2,24 @@
 <html>
 	<head>
 		<title>Skrif Demo</title>
-		<link rel="stylesheet" href="dist/erdospad.css">
-		<script src="dist/erdospad-debug.js"></script>
-
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="dist/skrif.css">
+		<script type="text/javascript" src="dist/skrif-debug.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-			  var skrif = new Skrif($("#demo")[0]);
+			  var skrif = new Skrif({"elem": $("#demo")[0], "content": $("#initial-content").text()});
 			});
-		</script>	
+		</script>
 	</head>
 	<body>
 		<div id="demo"></div>
+		<pre id="initial-content" style="display: none;">
+# Heading
+
+Paragraph
+
+- List
+- Another list Item
+		</pre>
 	</body>
 </html>

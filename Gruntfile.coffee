@@ -20,8 +20,8 @@ module.exports = (grunt) ->
       debug: 
         files: 
           'dist/<%= meta.file %>-debug.js': ['index.js']
-        options: 
-          debug: true
+        # options: 
+          #debug: true
           # external: [require.resolve('jquery')]
 
     uglify:
@@ -47,6 +47,9 @@ module.exports = (grunt) ->
       compile: 
         options:
           compress: true
+          use: [
+            require('stylus-type-utils')
+          ]
         files: 
           'dist/skrif.css': ['src/css/*.styl'] 
 
@@ -60,4 +63,4 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'browser', ['coffee:node', 'browserify:debug', 'browserify:full', 'browserify:dist', 'stylus']
   grunt.registerTask 'demo',    ['coffee:node', 'browserify:debug', 'stylus']
-  grunt.registerTask 'default', ['browser']
+  grunt.registerTask 'default', ['demo']

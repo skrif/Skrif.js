@@ -29,6 +29,8 @@
     "grunt-contrib-stylus": "~0.12.0",
     "jquery": "~2.1.0-beta3",
     "code-mirror": "~3.20.0",
-    "underscore-plus": "~0.6.1"
+    "underscore-plus": "~0.6.1",
+    "stylus": "~0.42.0",
+    "stylus-type-utils": "0.0.3"
   }
 }

@@ -8,24 +8,28 @@ def-cursor-color = hsla(220, 100%, 70%, 1)
 def-link-color   = hsla(360, 100%, 70%, 1)
 def-font-size    = 15px
 
-.SkrifPad.theme-default
-	font-family: "Ubuntu Mono", "Monospace"
-	background-color def-bg-color
-	color def-color
-	font-size rem(def-font-size)
+body 
+  background def-bg-color
+
+.Skrif.theme-default
+  .CodeMirror
+    background def-bg-color
+    font-family: "Ubuntu Mono", "Monospace"
+    color def-color
+    font-size rem(def-font-size)
 
   .cm-header
-		color def-bold-color
-		font-size rem(22px)
-		font-weight 700
+    color def-bold-color
+    font-size rem(22px)
+    font-weight 700
 
-	.cm-list, .cm-bold, .cm-em
-		color def-em-color
+  .cm-list, .cm-bold, .cm-em, .cm-variable-2
+    color def-em-color
    
    .cm-link
-   	text-decoration underline
-   	color def-link-color
+    text-decoration underline
+    color def-link-color
 
-	.CodeMirror-cursor
-		border-left-color def-cursor-color
-		border-size 2px
+  .CodeMirror-cursor
+    border-left-color def-cursor-color
+    border-size 2px
